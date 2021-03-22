@@ -5,6 +5,8 @@ body {
 .etchContainer {
     width: 480px;
     height: 480px;
+    margin: auto;
+    padding-top: 200px;
 }
 
 .etchTile {
@@ -12,4 +14,8 @@ body {
     height: 28px;
     width: 28px;
     float: left;
+}
+
+.black {
+    background-color: black;
 }
