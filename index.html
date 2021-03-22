@@ -9,9 +9,12 @@
 
 <body>
 
-    <div class='etchContainer' id='etch'>
- 
+    <div class='etchContainer' id='etch'></div>
 
+    <div id='buttonsContainer'>
+        <button onclick=clearTiles();>CLEAR</button>
+        <input  id='userGridSize' type="text" placeholder="Grid Size">
+        <button onclick=getGridSize();>Create Grid!</button>
     </div>
 
     <script src='index.js'></script>

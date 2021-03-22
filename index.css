@@ -6,16 +6,21 @@ body {
     width: 480px;
     height: 480px;
     margin: auto;
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 .etchTile {
-    border: 1px solid black;
-    height: 28px;
-    width: 28px;
+    border: 1px groove black;
     float: left;
+    box-shadow: 1px 1px 2px
 }
 
 .black {
     background-color: black;
+}
+
+#buttonsContainer {
+    width: 50vh;
+    margin: auto;
+    padding-top: 5vh;
 }
