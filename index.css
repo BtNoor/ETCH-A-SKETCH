@@ -1,0 +1,15 @@
+body {
+
+}
+
+.etchContainer {
+    width: 480px;
+    height: 480px;
+}
+
+.etchTile {
+    border: 1px solid black;
+    height: 28px;
+    width: 28px;
+    float: left;
+}
