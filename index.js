@@ -25,7 +25,10 @@ let gridChildren = gridContainer.children;
 function addListeners () {
     for (let i = 0; i < gridChildren.length; i++) {
         gridChildren[i].addEventListener('mouseover', () => {
-            gridChildren[i].classList.add('black');
+            //gridChildren[i].classList.add('black');
+        var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            //console.log(randomColor)
+        gridChildren[i].style.backgroundColor = `#${randomColor}`
         })
     }
 }
