@@ -35,14 +35,20 @@ function addListeners () {
 
 function clearTiles () {
     for (i = 0; i < gridChildren.length; i++) {
-        gridChildren[i].classList.remove('black');
+        gridChildren[i].style.backgroundColor = `white`;
     }
 }
 function getGridSize () {
     let userGridSize = document.getElementById('userGridSize').value;
     clearGrid();
-    createGrid(userGridSize);
 
+    if (userGridSize >= 100) {
+        createGrid(100);
+    } else if (userGridSize < 1) {
+    createGrid(1);
+    } else {
+        createGrid(userGridSize);
+    }
 }
 
 function clearGrid() {
@@ -55,7 +61,7 @@ function clearGrid() {
 
 
 function resizeGrid(num) {
-    let gridPixelSize = (480 / num) - 2;
+    let gridPixelSize = (600 / num) - 2;
     for (let i = 0; i < gridChildren.length; i++) {
         gridChildren[i].style.cssText = `width: ${gridPixelSize}px; height: ${gridPixelSize}px;`
 
