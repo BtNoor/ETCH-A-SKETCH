@@ -1,5 +1,6 @@
 const gridContainer = document.querySelector('.etchContainer')
 
+//Creates grid after taking a num
 function createGrid(num) {
     let x = num;
     let y = num;
@@ -16,12 +17,14 @@ function createGrid(num) {
     }
 }
 
+//generates initial grid on page load
 window.onload = function() {
     createGrid(32);
 }
 
 let gridChildren = gridContainer.children;
 
+//Iterates over divs and adds eventlisteners for onmouseover
 function addListeners () {
     for (let i = 0; i < gridChildren.length; i++) {
         gridChildren[i].addEventListener('mouseover', () => {
@@ -33,11 +36,14 @@ function addListeners () {
     }
 }
 
+//Clears current etch by setting color back to white
 function clearTiles () {
     for (i = 0; i < gridChildren.length; i++) {
         gridChildren[i].style.backgroundColor = `white`;
     }
 }
+
+//Takes user input, clears grid and creates a new one
 function getGridSize () {
     let userGridSize = document.getElementById('userGridSize').value;
     clearGrid();
@@ -51,6 +57,7 @@ function getGridSize () {
     }
 }
 
+//Checks how many divs are there and clears them to ensure no doubling up of divs
 function clearGrid() {
     for (let i = 0; i < gridChildren.length; i++) {
         for (let j = 0; i < gridChildren.length; j++) {
@@ -59,7 +66,7 @@ function clearGrid() {
     }
 }
 
-
+//Calculates what to set pixel size of divs given total grid size and applies css
 function resizeGrid(num) {
     let gridPixelSize = (600 / num) - 2;
     for (let i = 0; i < gridChildren.length; i++) {
